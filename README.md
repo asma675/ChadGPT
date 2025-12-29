@@ -1,10 +1,4 @@
-# BradGPT (Next.js + Your Own Backend)
-
-This is a conversion of your Base44 app into a traditional **Next.js (App Router)** app with:
-- **Your own backend** via Next.js API routes (Node.js runtime)
-- **Postgres database** via Prisma (Vercel-friendly)
-- **File uploads** via **Vercel Blob** (no local filesystem)
-- Base44 SDK removed (no Base44 classes/imports)
+# BradGPT (Next.js + Own Backend)
 
 ## 1) Setup
 
