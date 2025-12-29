@@ -1,52 +1,61 @@
-# BradGPT (Next.js + Own Backend)
+# BradGPT 🚀  
+**A ChatGPT-style AI application built with Next.js, a custom backend, and OpenAI**
 
-## 1) Setup
+BradGPT is a full-stack AI chat application featuring conversational AI, persistent sessions, file uploads, and image generation.  
+It is built using a modern **Next.js App Router architecture**, a **Node.js backend**, and a real database, and is fully deployable on **Vercel**.
 
-1. Install deps:
+---
+
+## ✨ Features
+
+- 🤖 ChatGPT-style conversational UI
+- 🧠 Conversation sessions & memory
+- 📚 Knowledge base management
+- 📊 Data visualization support
+- 🖼️ AI image generation
+- 📁 File uploads (cloud storage)
+- ⚡ Streaming responses
+- 🗄️ Database persistence
+- ☁️ Serverless & cloud-ready
+
+---
+
+## 🧱 Tech Stack
+
+**Frontend**
+- Next.js 14 (App Router)
+- React 18
+- Tailwind CSS
+- Radix UI
+- Framer Motion
+
+**Backend**
+- Next.js API Routes (Node runtime)
+- OpenAI API
+- Prisma ORM
+
+**Infrastructure**
+- PostgreSQL (Neon / Supabase / Vercel Postgres)
+- Cloud object storage (Vercel Blob)
+- Vercel hosting
+
+---
+
+## 🖥️ Run Locally (On Your Device)
+
+You can run BradGPT entirely on your own machine for development or personal use.
+
+### Prerequisites
+- Node.js **18+**
+- npm
+- A PostgreSQL database (or SQLite for local-only testing)
+- An OpenAI API key
+
+---
+
+### Clone the repository
 ```bash
-npm install
-```
+git clone https://github.com/asma675/ChadGPT.git
+cd ChadGPT
 
-2. Create your env file:
-```bash
-cp .env.example .env
-```
-
-3. Add your OpenAI key in `.env`:
-- `OPENAI_API_KEY=...`
-- optionally: `OPENAI_MODEL=gpt-4o-mini`
-
-4. Create the database:
-```bash
-npx prisma migrate dev --name init
-```
-
-## Deploy to Vercel
-
-1. **Create a Postgres database** (recommended: Neon, Supabase, Vercel Postgres) and copy the connection string.
-
-2. In Vercel: **Project → Settings → Environment Variables**, set:
-   - `DATABASE_URL`
-   - `OPENAI_API_KEY`
-   - `OPENAI_MODEL` (optional)
-   - `OPENAI_IMAGE_MODEL` (optional)
-
-3. Enable **Vercel Blob** for the project (Storage tab) so `BLOB_READ_WRITE_TOKEN` is provided automatically.
-
-4. Deploy (GitHub import recommended). Then run migrations:
-   - Vercel build will install deps.
-   - Run once in CI/CLI:
-     ```bash
-     npx prisma migrate deploy
-     ```
-
-## 2) Run
-```bash
-npm run dev
-```
-
-Open: http://localhost:3000/SETH
-
-## Notes
-- Files are stored in **Vercel Blob**; `/api/files/:id` redirects to the stored URL.
-- Auth is stubbed (`/api/me`). If you want login, add NextAuth and tie records to users.
+### By: Asma Ahmed
