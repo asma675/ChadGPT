@@ -1,0 +1,69 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model UploadedFile {
+  id          String   @id @default(cuid())
+  filename    String
+  contentType String?
+  size        Int?
+  url         String   // public URL (e.g., Vercel Blob)
+  createdAt   DateTime @default(now())
+}
+
+model ChatSession {
+  id        String   @id @default(cuid())
+  title     String?
+  messages  Json
+  mode      String?  // optional
+  archived  Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Learning {
+  id        String   @id @default(cuid())
+  fact      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model KnowledgeBase {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  content     String
+  active      Boolean  @default(true)
+  priority    Int      @default(1)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model DataVisualization {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  chart_type  String
+  data        Json
+  config      Json
+  insights    String?
+  source_file String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model SessionPresence {
+  id         String   @id @default(cuid())
+  session_id String
+  user_email String
+  user_name  String?
+  last_seen  DateTime
+  is_typing  Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
