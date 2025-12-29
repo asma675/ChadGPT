@@ -1,4 +1,4 @@
-# BradGPT 🚀  
+# BradGPT 🚀  by Asma Ahmed
 **A ChatGPT-style AI application built with Next.js, a custom backend, and OpenAI**
 
 BradGPT is a full-stack AI chat application featuring conversational AI, persistent sessions, file uploads, and image generation.  
@@ -57,5 +57,3 @@ You can run BradGPT entirely on your own machine for development or personal use
 ```bash
 git clone https://github.com/asma675/ChadGPT.git
 cd ChadGPT
-
-### By: Asma Ahmed
