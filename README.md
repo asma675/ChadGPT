@@ -1,7 +1,7 @@
-# BradGPT 🚀  by Asma Ahmed
+# ChadGPT 🚀  by Asma Ahmed
 **A ChatGPT-style AI application built with Next.js, a custom backend, and OpenAI**
 
-BradGPT is a full-stack AI chat application featuring conversational AI, persistent sessions, file uploads, and image generation.  
+ChadGPT is a full-stack AI chat application featuring conversational AI, persistent sessions, file uploads, and image generation.  
 It is built using a modern **Next.js App Router architecture**, a **Node.js backend**, and a real database, and is fully deployable on **Vercel**.
 
 ---
@@ -43,7 +43,7 @@ It is built using a modern **Next.js App Router architecture**, a **Node.js back
 
 ## 🖥️ Run Locally (On Your Device)
 
-You can run BradGPT entirely on your own machine for development or personal use.
+You can run ChadGPT entirely on your own machine for development or personal use.
 
 ### Prerequisites
 - Node.js **18+**
